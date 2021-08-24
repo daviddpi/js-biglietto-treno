@@ -1,8 +1,7 @@
 var chilometriPercorrere = parseInt( prompt("Inserisci i km da percorrere") );
 var etaPasseggero = parseInt( prompt("Inserisci l'età del passegero") );
 
-const centisimiAlKm = 0.21;
-var prezzoTotale = centisimiAlKm * chilometriPercorrere;
+var prezzoTotale = 0.21 * chilometriPercorrere;
 
 const scontoAnziani= (prezzoTotale * 40) / 100;
 const scontoGiovani= (prezzoTotale  *20) / 100;
@@ -15,7 +14,7 @@ console.log("Sconto giovani:" + scontoGiovani);
 
 var prezzoFinale = prezzoTotale;
 
-if(etaPasseggero==Number.isNaN){
+if(Number.isNaN(etaPasseggero)){
     alert("Errore, deve essere un numero!")
 }
 
